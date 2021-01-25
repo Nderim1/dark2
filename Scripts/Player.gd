@@ -8,7 +8,6 @@ const GRAVITY = 200
 const JUMP_FORCE = 128
 
 var motion = Vector2.ZERO
-
 onready var sprite = $Sprite
 onready var animationPlayer = $AnimationPlayer
 
