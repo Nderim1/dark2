@@ -5,4 +5,4 @@ onready var player = $Player
 onready var flag = $Flag
 
 func _process(delta):
-	Global.calculateDistance(player, flag)
+	Global.lastSceneLoaded = get_tree().current_scene.name

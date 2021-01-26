@@ -2,6 +2,7 @@ extends Node
 var score = 0
 var shouldCalculateDistance = true
 
+var lastSceneLoaded = ''
 
 func calculateDistance(object1, object2):
 	if shouldCalculateDistance == true:

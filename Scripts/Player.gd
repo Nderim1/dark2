@@ -10,10 +10,13 @@ const JUMP_FORCE = 128
 var motion = Vector2.ZERO
 onready var sprite = $Sprite
 onready var animationPlayer = $AnimationPlayer
+onready var player = get_node(".")
 
 func _physics_process(delta):
 	var x_input = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
-	
+	if player.position.y > 250:
+		# player fell
+		get_tree().change_scene("res://Scenes/GameOver.tscn")
 	if x_input != 0:
 		animationPlayer.play("Run")
 		motion.x += x_input * ACCELERATION * delta
